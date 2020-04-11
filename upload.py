@@ -14,7 +14,7 @@ def start_browser():
     driver.get('https://pt.stackoverflow.com/users/login?ssrc=head&returnurl=https%3a%2f%2fpt.stackoverflow.com%2f')
     input('login then press enter')
 
-def upload(filename, old_uploader_url, file_window_title):
+def upload(filename, old_uploader_url, file_window_title, file_folder):
     driver.get(old_uploader_url)
     time.sleep(10)
     upload_btn = driver.find_element_by_id('start-upload-button-single')
@@ -23,12 +23,11 @@ def upload(filename, old_uploader_url, file_window_title):
     hover.click().perform()
     time.sleep(3)
     autoit.win_active(file_window_title)
-    filename = "E:\prog\pyvid\\" + filename
+    filename = file_folder + filename
     autoit.control_send(file_window_title,"Edit1", filename)
     autoit.control_send(file_window_title,"Edit1","{ENTER}")
     time.sleep(10)
     driver.find_elements_by_class_name('save-changes-button')[0].click()
-
 
 
 
