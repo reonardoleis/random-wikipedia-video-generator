@@ -9,7 +9,8 @@ A simple Python app which generates a TTS-narrated video from a random Wikipedia
 ## 4. Use generate.generate(DESIRED_LANGUAGE) to generate a video. Note that this function returns the generated file filename.
 ### -> DESIRED_LANGUAGE: Wikipedia random article's language (e.g: en, pt, ru...)
 
-## 5. Use upload.upload(FILENAME, OLD_UPLOADER_URL, FILE_WINDOW_NAME) to upload the file.
+## 5. Use upload.upload(FILENAME, OLD_UPLOADER_URL, FILE_WINDOW_NAME, FILE_FOLDER) to upload the file.
 ### -> FILENAME: the generate.generate() return value
 ### -> OLD_UPLOADER_URL: your Google Account's old uploader URL. You can get it on YouTube.
 ### -> FILE_WINDOW_NAME: the title of the select file dialog (default is "Open")
+### -> FILE_FOLDER: the folder of your main Python file.
