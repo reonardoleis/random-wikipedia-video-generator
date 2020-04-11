@@ -14,7 +14,7 @@ def start_browser():
     driver.get('https://pt.stackoverflow.com/users/login?ssrc=head&returnurl=https%3a%2f%2fpt.stackoverflow.com%2f')
     input('login then press enter')
 
-def upload(filename = False, old_uploader_url, file_window_title):
+def upload(filename, old_uploader_url, file_window_title):
     driver.get(old_uploader_url)
     time.sleep(10)
     upload_btn = driver.find_element_by_id('start-upload-button-single')
